@@ -23,7 +23,5 @@ public class EnterDetailsActivity extends AppCompatActivity {
         txtTech2 = findViewById(R.id.tech_2);
         txtTech3 = findViewById(R.id.tech_3);
         btnDone = findViewById(R.id.btn_done);
-
-
     }
 }
