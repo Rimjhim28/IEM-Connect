@@ -14,13 +14,14 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyBqbXbEFLQ8tfLi7YY1qvtsYupFRR6rNZc" />
-        <activity android:name=".SearchResults">
+        <activity android:name=".EnterDetailsActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".SearchResults"/>
     </application>
 
 </manifest>
