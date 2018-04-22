@@ -1,5 +1,6 @@
 package com.example.android.iemconnect;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -22,7 +23,7 @@ import java.util.Map;
 public class EnterDetailsActivity extends AppCompatActivity {
 
     EditText txtName, txtDept, txtEnrollNum, txtContact, txtTech1, txtTech2, txtTech3;
-    Button btnDone, btnCheck;
+    Button btnDone, btn;
     final FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference ref = database.getReference();
     int count = 0;
@@ -41,7 +42,7 @@ public class EnterDetailsActivity extends AppCompatActivity {
         txtTech2 = findViewById(R.id.tech_2);
         txtTech3 = findViewById(R.id.tech_3);
         btnDone = findViewById(R.id.btn_done);
-        btnCheck = findViewById(R.id.btn_check);
+        btn = findViewById(R.id.button);
 
         btnDone.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,10 +51,11 @@ public class EnterDetailsActivity extends AppCompatActivity {
             }
         });
 
-        btnCheck.setOnClickListener(new View.OnClickListener() {
+        btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                readFromDatabase();
+                Intent intent = new Intent(EnterDetailsActivity.this, SearchResults.class);
+                startActivity(intent);
             }
         });
     }
