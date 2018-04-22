@@ -6,6 +6,11 @@ public  class User {
 
     public User(){}
 
+    public User (String name,String department){
+        this.name = name;
+        this.department = department;
+    }
+
     public User (String name, String contact, String department, String tech1, String tech2, String tech3){
         this.name = name;
         this.contact = contact;
